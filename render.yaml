@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: archimeets-forwarder        # как будет показано в панели Render
+    runtime: python                   # Render возьмёт версию из runtime.txt
+                                      # (python-3.11.8 в одной строке)
+    buildCommand: |
+      python -m pip install --upgrade pip
+      python -m pip install -r requirements.txt
+    startCommand: python main.py
+    region: oregon                    # при желании можно поменять
