@@ -1,0 +1,7 @@
+services:
+  - type: worker
+    name: archimeets-forwarder
+    env: python
+    buildCommand: ""
+    startCommand: python main.py
+    pythonVersion: 3.11.9
